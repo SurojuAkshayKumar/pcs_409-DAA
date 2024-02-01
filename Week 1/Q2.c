@@ -1,5 +1,5 @@
-9#include<stdio.h>
-int bs(int arr[] , int size , int key , int *comp;
+#include<stdio.h>
+int bs(int arr[] , int size , int key , int *comp)
 {
  int low = 0 , high = size - 1 ;
  while (low <= high ){
@@ -29,7 +29,7 @@ int main()
 
 int arr[size];
 printf("Enter elements ");
-for (innt i = 0; i< size ; i++)
+for (int i = 0; i< size ; i++)
 {
  scanf("%d" , &arr[i]);
 }
@@ -51,4 +51,3 @@ printf("Element %d not found \n" ,key );
 printf("Total number of comparison: %d\n" ,comp);
 return 0;
 }
-
