@@ -1,5 +1,7 @@
 #include<stdio.h>
 int ls(int arr[] ,int n,int key,int *comp) 
+{
+for (int i=0 ; i< n; i++)
 { 
  (*comp)++ ;
  if (arr[i] == key)
@@ -14,15 +16,19 @@ int ls(int arr[] ,int n,int key,int *comp)
  {
   int n , key , comp = 0;
   printf("Enter the size of the array:\n");
-   for(int i=0 ;i<n ; i++)
+  scanf("%d" , &n);
+  
+  int arr[n] ;
+  printf("Enter the elements");
+  for(int i=0 ;i<n ; i++)
     {
-     scanf(""%d" , &arr[i]);
+     scanf("%d", &arr[i]);
     }
 
   printf("Enter the key element to search: ");
   scanf("%d" , &key);
 
-int result = ls((arr , n , key , &comp);
+int result = ls(arr , n , key , &comp);
  if (result != -1)
   {
    printf("Element present %d \n" , result);
@@ -31,7 +37,7 @@ else
  {
   printf("Element not present \n");
  }
-  printf ("Totak number of comparison : %d \n" , comp);
+  printf ("Total number of comparison : %d \n" , comp);
 
   return 0 ;
 }
